@@ -1,56 +1,43 @@
-import React, {Component} from 'react';
-import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-    Redirect
-} from 'react-router-dom';
+/**
+ * Created by ashraful on 4/26/17.
+ */
 
-// import NoMatch from './NoMatch';
+import React, {Component} from 'react';
+
+import ContentView from './ContentView'
 
 class NavigationBar extends Component {
     render() {
         return (
-            <Router>
-                <div>
-                    <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
-                        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                                data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"/>
-                        </button>
-                        <a className="navbar-brand" href="/">{this.props.options.brand}</a>
-                        <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-                            <ul className="navbar-nav mr-auto">
+            <div>
+                <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+                    <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                            data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"/>
+                    </button>
+                    <a className="navbar-brand" href="/">{this.props.options.brand}</a>
+                    <div className="collapse navbar-collapse" id="navbarsExampleDefault">
+                        <ul className="navbar-nav mr-auto">
 
-                                {this.props.options.items.map(item =>
-                                    <li className="nav-item"
-                                        key={item.id}> {/* map require unique key. So, I just put. Nothing special */}
-                                        <Link className="nav-link" to={item.url}>{item.name}</Link>
-                                    </li>
-                                )}
-                            </ul>
-                            <form className="form-inline my-2 my-lg-0">
-                                <input className="form-control mr-sm-2" type="text" placeholder="Search"/>
-                                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-                        </div>
-                    </nav>
+                            {this.props.options.items.map(item =>
+                                <li className="nav-item"
+                                    key={item.id}> {/* map require unique key. So, I just put. Nothing special */}
+                                    <a className="nav-link" href={item.url}>{item.name}</a>
+                                </li>
+                            )}
+                        </ul>
+                        <form className="form-inline my-2 my-lg-0">
+                            <input className="form-control mr-sm-2" type="text" placeholder="Search"/>
+                            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </nav>
 
-                    {/* Everything will happen here. All other view will be added under navbar */}
+                {/* A ContentView will be include here */}
+                <ContentView states={this.props.options.items}/>
+            </div>
 
-                    {/* Always start with /home */}
-                    <Redirect from="/" to="/home"/>
-
-                    {/* Defining Route */}
-                    {this.props.options.items.map(item =>
-                        <Route exact path={item.url} component={item.component} key={item.id}/>
-                    )}
-
-                    {/* Defining 404 url */}
-                    {/*<Route component={NoMatch}/>*/}
-                </div>
-            </Router>
         )
     }
 }
