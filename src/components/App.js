@@ -3,6 +3,10 @@ import React, {Component} from 'react';
 import '../styles/App.css';
 
 import NavigationBar from './NavigationBar'
+import Home from './Home'
+import About from './About'
+import Contact from './Contact'
+import Portfolio from './Portfolio'
 
 class App extends Component {
     constructor(props) {
@@ -13,22 +17,26 @@ class App extends Component {
                 {
                     id: 1,
                     name: 'Home',
-                    url: '/home'
+                    url: '/home',
+                    component: Home
                 },
                 {
                     id: 2,
                     name: 'About',
-                    url: '/about'
+                    url: '/about',
+                    component: About
                 },
                 {
                     id: 3,
                     name: 'Contact',
-                    url: '/contact'
+                    url: '/contact',
+                    component: Contact
                 },
                 {
                     id: 4,
                     name: 'Portfolio',
-                    url: '/portfolios'
+                    url: '/portfolios',
+                    component: Portfolio
                 },
             ]
         }
@@ -38,9 +46,6 @@ class App extends Component {
         return (
             <div>
                 <NavigationBar options={this.state}/>
-                <div className="jumbotron">
-                    <h1 className="text-center">Hello, World</h1>
-                </div>
             </div>
         );
     }

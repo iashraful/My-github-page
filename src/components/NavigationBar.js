@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 import {
     BrowserRouter as Router,
     Route,
-    Link
+    Link,
+    Redirect
 } from 'react-router-dom';
 
-import Home from './Home';
+// import NoMatch from './NoMatch';
 
 class NavigationBar extends Component {
     render() {
@@ -38,10 +39,16 @@ class NavigationBar extends Component {
 
                     {/* Everything will happen here. All other view will be added under navbar */}
 
+                    {/* Always start with /home */}
+                    <Redirect from="/" to="/home"/>
+
                     {/* Defining Route */}
                     {this.props.options.items.map(item =>
-                        <Route exact path={item.url} component={Home} key={item.id}/>
+                        <Route exact path={item.url} component={item.component} key={item.id}/>
                     )}
+
+                    {/* Defining 404 url */}
+                    {/*<Route component={NoMatch}/>*/}
                 </div>
             </Router>
         )
