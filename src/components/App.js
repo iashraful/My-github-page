@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import '../styles/App.css';
 
 import NavigationBar from './NavigationBar'
@@ -12,22 +13,22 @@ class App extends Component {
                 {
                     id: 1,
                     name: 'Home',
-                    url: '#/home'
+                    url: '/home'
                 },
                 {
                     id: 2,
                     name: 'About',
-                    url: '#/about'
+                    url: '/about'
                 },
                 {
                     id: 3,
                     name: 'Contact',
-                    url: '#/contact'
+                    url: '/contact'
                 },
                 {
                     id: 4,
                     name: 'Portfolio',
-                    url: '#/portfolios'
+                    url: '/portfolios'
                 },
             ]
         }
