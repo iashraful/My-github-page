@@ -8,7 +8,7 @@ class NavigationBar extends Component {
                     <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                             data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
                             aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon"/>
                     </button>
                     <a className="navbar-brand" href="#">{this.props.options.brand}</a>
                     <div className="collapse navbar-collapse" id="navbarsExampleDefault">

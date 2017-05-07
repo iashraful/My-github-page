@@ -5,7 +5,7 @@ import NavigationBar from './NavigationBar'
 
 class App extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             brand: 'Ashraful Islam',
             items: [
