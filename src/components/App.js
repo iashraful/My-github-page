@@ -11,13 +11,15 @@ import Portfolio from './Portfolio'
 class App extends Component {
     constructor(props) {
         super(props);
+
+        // This state will be use for app specific purpose only. Like, urls, app name, authentication etc
         this.state = {
             brand: 'Ashraful Islam',
             items: [
                 {
                     id: 1,
                     name: 'Home',
-                    url: '/home',
+                    url: '/',
                     component: Home
                 },
                 {
