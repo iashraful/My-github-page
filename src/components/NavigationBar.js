@@ -2,14 +2,15 @@ import React, {Component} from 'react';
 import {
     HashRouter,
     Route,
-    Link
+    NavLink,
+    Redirect
 } from 'react-router-dom';
 
 class NavigationBar extends Component {
     render() {
         return (
             <HashRouter>
-                <div>
+                <div className="nav-content">
                     <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
                         <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                                 data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
@@ -18,12 +19,12 @@ class NavigationBar extends Component {
                         </button>
                         <a className="navbar-brand" href="/">{this.props.options.brand}</a>
                         <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-                            <ul className="navbar-nav ml-auto">
+                            <ul className="navbar-nav ml-auto mr-auto">
 
                                 {this.props.options.items.map(item =>
                                     <li className="nav-item"
                                         key={item.id}> {/* map require unique key. So, I just put. Nothing special */}
-                                        <Link className="nav-link" to={item.url}>{item.name}</Link>
+                                        <NavLink className="nav-link" activeClassName="active" to={item.url}>{item.name}</NavLink>
                                     </li>
                                 )}
                             </ul>
@@ -31,6 +32,9 @@ class NavigationBar extends Component {
                     </nav>
 
                     {/* Everything will happen here. All other view will be added under navbar */}
+
+                    {/* Always start with /home */}
+                    <Redirect from="/" to="/home"/>
 
                     {/* Defining Route */}
                     {this.props.options.items.map(item =>

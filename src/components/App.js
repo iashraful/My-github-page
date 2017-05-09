@@ -17,7 +17,7 @@ class App extends Component {
                 {
                     id: 1,
                     name: 'Home',
-                    url: '/',
+                    url: '/home',
                     component: Home
                 },
                 {

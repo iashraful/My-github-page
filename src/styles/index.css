@@ -1,5 +1,15 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.nav-content {
+    margin-top: 50px;
+}
+
+.active {
+    background-color: aliceblue;
+    color: black!important;
+    font-weight: 700;
 }
