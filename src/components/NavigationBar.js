@@ -4,39 +4,47 @@
 
 import React, {Component} from 'react';
 
-import ContentView from './ContentView'
+import {UIRouter, UIView, UISref, UISrefActive, pushStateLocationPlugin} from 'ui-router-react';
+
+import '../styles/index.css';
 
 class NavigationBar extends Component {
     render() {
+        // Registering plugins
+        const plugins = [pushStateLocationPlugin];
+
         return (
-            <div>
-                <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
-                    <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                            data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"/>
-                    </button>
-                    <a className="navbar-brand" href="/">{this.props.options.brand}</a>
-                    <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-                        <ul className="navbar-nav mr-auto">
+            <UIRouter plugins={plugins} states={this.props.options.items}>
+                <div>
+                    <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+                        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                                data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"/>
+                        </button>
+                        <a className="navbar-brand" href="/">{this.props.options.brand}</a>
+                        <div className="collapse navbar-collapse" id="navbarsExampleDefault">
+                            <ul className="navbar-nav ml-auto">
+                                {/* Navbar items will be iterate here */}
+                                {this.props.options.items.map(item =>
+                                    <li className="nav-item" key={item.id}>
+                                        {/* map require unique key. So, I just put. Nothing special */}
+                                        <UISrefActive class="active nav-link">
+                                            <UISref to={item.url}>
+                                                <a>{item.name}</a>
+                                            </UISref>
+                                        </UISrefActive>
+                                    </li>
+                                )}
+                            </ul>
+                        </div>
+                    </nav>
 
-                            {this.props.options.items.map(item =>
-                                <li className="nav-item"
-                                    key={item.id}> {/* map require unique key. So, I just put. Nothing special */}
-                                    <a className="nav-link" href={item.url}>{item.name}</a>
-                                </li>
-                            )}
-                        </ul>
-                        <form className="form-inline my-2 my-lg-0">
-                            <input className="form-control mr-sm-2" type="text" placeholder="Search"/>
-                            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                    </div>
-                </nav>
+                    {/* A ContentView will be include here */}
+                    <UIView/>
+                </div>
 
-                {/* A ContentView will be include here */}
-                <ContentView states={this.props.options.items}/>
-            </div>
+            </UIRouter>
 
         )
     }
