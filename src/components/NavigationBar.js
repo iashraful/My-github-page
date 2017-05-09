@@ -3,8 +3,11 @@ import {
     HashRouter,
     Route,
     NavLink,
-    Redirect
+    Redirect,
+    Switch
 } from 'react-router-dom';
+
+import NotFound from './NotFound';
 
 class NavigationBar extends Component {
     render() {
@@ -24,7 +27,9 @@ class NavigationBar extends Component {
                                 {this.props.options.items.map(item =>
                                     <li className="nav-item"
                                         key={item.id}> {/* map require unique key. So, I just put. Nothing special */}
-                                        <NavLink className="nav-link" activeClassName="active" to={item.url}>{item.name}</NavLink>
+                                        <NavLink className="nav-link" activeClassName="active" to={item.url}>
+                                            {item.name}
+                                        </NavLink>
                                     </li>
                                 )}
                             </ul>
@@ -37,11 +42,13 @@ class NavigationBar extends Component {
                     <Redirect from="/" to="/home"/>
 
                     {/* Defining Route */}
-                    {this.props.options.items.map(item =>
-                        <Route exact path={item.url} component={item.component} key={item.id}/>
-                    )}
-
-                    {/* Defining 404 url */}
+                    <Switch>
+                        {this.props.options.items.map(item =>
+                            <Route exact path={item.url} component={item.component} key={item.id}/>
+                        )}
+                        {/* Defining 404 url */}
+                        <Route component={NotFound}/>
+                    </Switch>
                 </div>
             </HashRouter>
         )
