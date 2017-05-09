@@ -18,7 +18,7 @@ class NavigationBar extends Component {
                     </button>
                     <a className="navbar-brand" href="/">{this.props.options.brand}</a>
                     <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-                        <ul className="navbar-nav mr-auto">
+                        <ul className="navbar-nav ml-auto">
 
                             {this.props.options.items.map(item =>
                                 <li className="nav-item"
@@ -27,10 +27,6 @@ class NavigationBar extends Component {
                                 </li>
                             )}
                         </ul>
-                        <form className="form-inline my-2 my-lg-0">
-                            <input className="form-control mr-sm-2" type="text" placeholder="Search"/>
-                            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
                     </div>
                 </nav>
 
