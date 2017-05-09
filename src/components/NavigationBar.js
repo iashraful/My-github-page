@@ -1,17 +1,14 @@
 import React, {Component} from 'react';
 import {
-    BrowserRouter as Router,
+    HashRouter,
     Route,
-    Link,
-    Redirect
+    Link
 } from 'react-router-dom';
-
-// import NoMatch from './NoMatch';
 
 class NavigationBar extends Component {
     render() {
         return (
-            <Router>
+            <HashRouter>
                 <div>
                     <nav className="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
                         <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -21,7 +18,7 @@ class NavigationBar extends Component {
                         </button>
                         <a className="navbar-brand" href="/">{this.props.options.brand}</a>
                         <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-                            <ul className="navbar-nav mr-auto">
+                            <ul className="navbar-nav ml-auto">
 
                                 {this.props.options.items.map(item =>
                                     <li className="nav-item"
@@ -30,17 +27,10 @@ class NavigationBar extends Component {
                                     </li>
                                 )}
                             </ul>
-                            <form className="form-inline my-2 my-lg-0">
-                                <input className="form-control mr-sm-2" type="text" placeholder="Search"/>
-                                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                            </form>
                         </div>
                     </nav>
 
                     {/* Everything will happen here. All other view will be added under navbar */}
-
-                    {/* Always start with /home */}
-                    <Redirect from="/" to="/home"/>
 
                     {/* Defining Route */}
                     {this.props.options.items.map(item =>
@@ -48,9 +38,8 @@ class NavigationBar extends Component {
                     )}
 
                     {/* Defining 404 url */}
-                    {/*<Route component={NoMatch}/>*/}
                 </div>
-            </Router>
+            </HashRouter>
         )
     }
 }
