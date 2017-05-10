@@ -7,6 +7,21 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);
+}
+
+.error-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.error-actions {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.error-actions .btn {
+    margin-right: 10px;
 }
 
 .nav-content {
@@ -15,22 +30,22 @@ body {
 
 .active {
     background-color: aliceblue;
-    color: black!important;
+    color: black !important;
     font-weight: 700;
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #292b2c;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #292b2c;
 }
 
 .footer > .container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .container-fluid .f-items {
@@ -60,9 +75,14 @@ body {
     padding: 8px 50px;
 }
 
+.jumbotron {
+    /* I need all features of jumbotron rather than bg color */
+    background-color: transparent!important;
+}
+
 /* Media Queries */
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width : 300px) and (max-width : 992px) {
+@media only screen and (min-width: 300px) and (max-width: 992px) {
     /* Styles should be here*/
     .nav-item {
         text-align: center;
@@ -73,7 +93,7 @@ body {
     }
 }
 
-@media only screen and (min-width : 300px) and (max-width : 574px) {
+@media only screen and (min-width: 300px) and (max-width: 574px) {
     /* Styles should be here*/
     .profile-details {
         padding-top: 40px;

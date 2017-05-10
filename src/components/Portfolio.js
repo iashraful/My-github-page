@@ -8,7 +8,10 @@ class Portfolio extends Component {
     render() {
         return (
             <div className="jumbotron">
-                <h1 className="text-center">Hello, from Portfolio</h1>
+                <h2 className="text-center">
+                    Author is looking for his portfolio.<br/>
+                    Please visit some days later.
+                </h2>
             </div>
         )
     }

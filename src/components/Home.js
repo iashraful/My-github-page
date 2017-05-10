@@ -12,10 +12,10 @@ class Home extends Component {
         return (
             <div className="jumbotron">
                 <div className="row">
-                    <div className="col-md-4 col-sm-6 text-center profile-image">
+                    <div className="col-md-5 col-sm-6 text-center profile-image">
                         <img className="rounded" src={me} width="240" height="240" alt="Profile showcase"/>
                     </div>
-                    <div className="col-md-8 col-sm-6 profile-details">
+                    <div className="col-md-7 col-sm-6 profile-details">
                         <h4><i className="fa fa-user-o p-r-10" aria-hidden="true"/>Mohammad Ashraful Islam</h4>
                         <p>
                             <i className="fa fa-sitemap p-r-10" aria-hidden="true"/>
