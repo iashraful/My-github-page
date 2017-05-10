@@ -4,15 +4,16 @@ import '../styles/App.css';
 
 import NavigationBar from './NavigationBar'
 import Home from './Home'
-import About from './About'
+import Resume from './Resume'
 import Contact from './Contact'
 import Portfolio from './Portfolio'
+import Footer from './Footer'
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            brand: 'Ashraful Islam',
+            brand: 'Mohammad Ashraful Islam',
             items: [
                 {
                     id: 1,
@@ -22,9 +23,9 @@ class App extends Component {
                 },
                 {
                     id: 2,
-                    name: 'About',
-                    url: '/about',
-                    component: About
+                    name: 'Resume',
+                    url: '/resume',
+                    component: Resume
                 },
                 {
                     id: 3,
@@ -46,6 +47,8 @@ class App extends Component {
         return (
             <div>
                 <NavigationBar options={this.state}/>
+
+                <Footer/>
             </div>
         );
     }

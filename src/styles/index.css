@@ -13,3 +13,22 @@ body {
     color: black!important;
     font-weight: 700;
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #292b2c;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container .f-items {
+    margin: 20px 0;
+    color: white;
+}
