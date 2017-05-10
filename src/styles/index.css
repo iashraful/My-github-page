@@ -62,6 +62,20 @@ body {
     color: whitesmoke;
 }
 
+/* Resume part */
+.resume {
+}
+
+.skill-desc {
+    font-size: 0.95rem;
+}
+
+.moto {
+    margin-top: -8px;
+    color: #9936d2;
+    font-style: italic;
+}
+
 /* Helper classes */
 .p-r-10 {
     padding-right: 10px;
@@ -75,9 +89,41 @@ body {
     padding: 8px 50px;
 }
 
+.p-t-2p {
+    padding-top: 2%;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #000000;
+    padding: 0;
+    margin-top: -5px;
+}
+
+/* Progress bar helper class */
+
+.w-60 {
+    width: 60%!important;
+}
+
+.w-40 {
+    width: 40%!important;
+}
+
+.w-80 {
+    width: 80%!important;
+}
+
+/* Override */
 .jumbotron {
     /* I need all features of jumbotron rather than bg color */
-    background-color: transparent!important;
+    background-color: transparent !important;
+}
+
+.progress {
+    background-color: rgba(217, 83, 79, 0.23)!important;
 }
 
 /* Media Queries */
@@ -106,5 +152,20 @@ body {
 
     .f-source-title {
         display: none;
+    }
+
+    /* Resume */
+    .person-name {
+        font-size: 1.4rem;
+    }
+
+    .pull-right {
+        float: left!important;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .container {
+        width: 736px;
     }
 }
