@@ -28,23 +28,41 @@ body {
   background-color: #292b2c;
 }
 
-.footer > .container {
+.footer > .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
 }
 
-.container .f-items {
-    margin: 20px 0;
+.container-fluid .f-items {
+    margin: 16px 0;
     color: white;
 }
 
+.footer i {
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+.f-source-title {
+    color: whitesmoke;
+}
+
+/* Helper classes */
 .p-r-10 {
     padding-right: 10px;
 }
 
+.p-r-20 {
+    padding-right: 20px;
+}
+
+.p-l-r-50 {
+    padding: 8px 50px;
+}
+
 /* Media Queries */
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width : 320px) and (max-width : 992px) {
+@media only screen and (min-width : 300px) and (max-width : 992px) {
     /* Styles should be here*/
     .nav-item {
         text-align: center;
@@ -55,10 +73,18 @@ body {
     }
 }
 
-@media only screen and (min-width : 320px) and (max-width : 574px) {
+@media only screen and (min-width : 300px) and (max-width : 574px) {
     /* Styles should be here*/
     .profile-details {
         padding-top: 40px;
         padding-bottom: 15px;
+    }
+
+    .footer i {
+        font-size: 1.5rem;
+    }
+
+    .f-source-title {
+        display: none;
     }
 }

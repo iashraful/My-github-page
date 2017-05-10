@@ -13,7 +13,7 @@ class Home extends Component {
             <div className="jumbotron">
                 <div className="row">
                     <div className="col-md-4 col-sm-6 text-center profile-image">
-                        <img className="rounded" src={me} width="220" height="240" alt="Profile showcase"/>
+                        <img className="rounded" src={me} width="240" height="240" alt="Profile showcase"/>
                     </div>
                     <div className="col-md-8 col-sm-6 profile-details">
                         <h4><i className="fa fa-user-o p-r-10" aria-hidden="true"/>Mohammad Ashraful Islam</h4>
@@ -30,16 +30,16 @@ class Home extends Component {
                             <i className="fa fa-phone p-r-10" aria-hidden="true"/> 01757722681 <br/>
                             <i className="fa fa-github p-r-10" aria-hidden="true"/>
                             <a href="https://github.com/iamashraful" target="_blank">
-                                https://github.com/iamashraful
+                                Github Profile
                             </a> <br/>
                             <i className="fa fa-stack-overflow p-r-10" aria-hidden="true"/>
                             <a href="http://stackoverflow.com/users/5527679/ashraful-islam" target="_blank">
-                                http://stackoverflow.com/users/5527679/ashraful-islam
+                                Stack Overflow Profile
                             </a> <br/>
 
                         </p>
 
-                        <Link className="btn btn-outline-success" to="/resume" role="button">View Resume</Link>
+                        <Link className="btn btn-outline-success p-l-r-50" to="/resume" role="button">View Resume</Link>
                     </div>
                 </div>
             </div>
