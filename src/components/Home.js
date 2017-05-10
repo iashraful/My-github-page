@@ -12,21 +12,35 @@ class Home extends Component {
         return (
             <div className="jumbotron">
                 <div className="row">
-                	<div className="col-md-4 col-sm-6 text-center">
-                		<img className="rounded" src={me} width="200" height="240" alt="Profile showcase"/>
-                	</div>
-                	<div className="col-md-8 col-sm-6">
-                		<h4>Mohammad Ashraful Islam</h4>
-                		<p>Junior Software Engineer at <strong>Field Information Solutions Ltd.</strong></p>
-                		<p>
-                			Ashkona Road, Airport, Uttara, Dhaka 1230 <br/> 
-                			ashrafulrobin3@gmail.com <br/>
-                			01757722681 <br/>
-                			<a href="https://github.com/iamashraful" target="_blank">https://github.com/iamashraful</a>
-                		</p>
+                    <div className="col-md-4 col-sm-6 text-center profile-image">
+                        <img className="rounded" src={me} width="220" height="240" alt="Profile showcase"/>
+                    </div>
+                    <div className="col-md-8 col-sm-6 profile-details">
+                        <h4><i className="fa fa-user-o p-r-10" aria-hidden="true"/>Mohammad Ashraful Islam</h4>
+                        <p>
+                            <i className="fa fa-sitemap p-r-10" aria-hidden="true"/>
+                            Junior Software Engineer at <a href="https://field.buzz/" target="_blank">Field Information
+                            Solutions Ltd.</a>
+                        </p>
+                        <p>
+                            <i className="fa fa-home p-r-10" aria-hidden="true"/>
+                            Ashkona Road, Airport, Uttara, Dhaka 1230 <br/>
+                            <i className="fa fa-envelope-open-o p-r-10" aria-hidden="true"/>
+                            ashrafulrobin3@gmail.com <br/>
+                            <i className="fa fa-phone p-r-10" aria-hidden="true"/> 01757722681 <br/>
+                            <i className="fa fa-github p-r-10" aria-hidden="true"/>
+                            <a href="https://github.com/iamashraful" target="_blank">
+                                https://github.com/iamashraful
+                            </a> <br/>
+                            <i className="fa fa-stack-overflow p-r-10" aria-hidden="true"/>
+                            <a href="http://stackoverflow.com/users/5527679/ashraful-islam" target="_blank">
+                                http://stackoverflow.com/users/5527679/ashraful-islam
+                            </a> <br/>
 
-                		<Link className="btn btn-outline-success" to="/resume" role="button">View Resume</Link>
-                	</div>
+                        </p>
+
+                        <Link className="btn btn-outline-success" to="/resume" role="button">View Resume</Link>
+                    </div>
                 </div>
             </div>
         )

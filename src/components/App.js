@@ -5,7 +5,7 @@ import '../styles/App.css';
 import NavigationBar from './NavigationBar'
 import Home from './Home'
 import Resume from './Resume'
-import Contact from './Contact'
+// import Contact from './Contact'
 import Portfolio from './Portfolio'
 import Footer from './Footer'
 
@@ -27,12 +27,13 @@ class App extends Component {
                     url: '/resume',
                     component: Resume
                 },
-                {
-                    id: 3,
-                    name: 'Contact',
-                    url: '/contact',
-                    component: Contact
-                },
+                /** Contact might be add in further versions  */
+                // {
+                //     id: 3,
+                //     name: 'Contact',
+                //     url: '/contact',
+                //     component: Contact
+                // },
                 {
                     id: 4,
                     name: 'Portfolio',
