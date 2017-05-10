@@ -10,12 +10,7 @@ class Resume extends Component {
             <div className="container jumbotron">
                 <div className="resume">
                     <div className="row">
-                        <div className="col-md-8 col-sm-7 col-xs-12">
-                            <h3 className="person-name">Mohammad Ashraful Islam</h3>
-                            <p className="moto">passionate problem solver</p>
-                        </div>
-
-                        <div className="col-md-4 col-sm-5 col-xs-12">
+                        <div className="col-md-4 col-sm-5 col-xs-12 push-sm-7">
                             <i className="fa fa-map-marker p-r-10" aria-hidden="true"/> Ashkona, Uttara, Dhaka <br/>
                             <i className="fa fa-phone p-r-10" aria-hidden="true"/> 01757722681 <br/>
                             <i className="fa fa-envelope p-r-10" aria-hidden="true"/> ashrafulrobin3@gmail.com <br/>
@@ -23,6 +18,11 @@ class Resume extends Component {
                             <a href="https://github.com/iamashraful" target="_blank">
                                 https://github.com/iamashraful
                             </a>
+                        </div>
+
+                        <div className="col-md-8 col-sm-7 col-xs-12 pull-sm-4">
+                            <h3 className="person-name">Mohammad Ashraful Islam</h3>
+                            <p className="moto">passionate problem solver</p>
                         </div>
                     </div>
 
@@ -223,7 +223,7 @@ class Resume extends Component {
                                 </div>
                             </div>
 
-                            <div className="row">
+                            <div className="row p-t-2p">
                                 <div className="col-md-5 col-sm-6 col-xs-12">
                                     <h6>Mother's Name</h6>
                                 </div>
@@ -232,7 +232,7 @@ class Resume extends Component {
                                 </div>
                             </div>
 
-                            <div className="row">
+                            <div className="row p-t-2p">
                                 <div className="col-md-5 col-sm-6 col-xs-12">
                                     <h6>Nationality</h6>
                                 </div>
@@ -241,7 +241,7 @@ class Resume extends Component {
                                 </div>
                             </div>
 
-                            <div className="row">
+                            <div className="row p-t-2p">
                                 <div className="col-md-5 col-sm-6 col-xs-12">
                                     <h6>Permanent Address</h6>
                                 </div>
@@ -251,7 +251,7 @@ class Resume extends Component {
                                 </div>
                             </div>
 
-                            <div className="row">
+                            <div className="row p-t-2p">
                                 <div className="col-md-5 col-sm-6 col-xs-12">
                                     <h6>Date of Birth</h6>
                                 </div>
@@ -260,7 +260,7 @@ class Resume extends Component {
                                 </div>
                             </div>
 
-                            <div className="row">
+                            <div className="row p-t-2p">
                                 <div className="col-md-5 col-sm-6 col-xs-12">
                                     <h6>Blood Group</h6>
                                 </div>
