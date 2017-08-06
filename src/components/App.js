@@ -27,15 +27,8 @@ class App extends Component {
                     url: '/resume',
                     component: Resume
                 },
-                /** Contact might be add in further versions  */
-                // {
-                //     id: 3,
-                //     name: 'Contact',
-                //     url: '/contact',
-                //     component: Contact
-                // },
                 {
-                    id: 4,
+                    id: 3,
                     name: 'Portfolio',
                     url: '/portfolios',
                     component: Portfolio

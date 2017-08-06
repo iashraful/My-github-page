@@ -32,6 +32,9 @@ class NavigationBar extends Component {
                                         </NavLink>
                                     </li>
                                 )}
+                                <li className="nav-item">
+                                    <a className="nav-link" href="http://blog.iashraful.me" target="_blank">Blog</a>
+                                </li>
                             </ul>
                         </div>
                     </nav>
